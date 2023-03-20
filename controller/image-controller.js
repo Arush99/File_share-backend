@@ -10,7 +10,7 @@ export const uploadImage = async (request, response) => {
     response
       .status(200)
       .json({
-        path: `https://fileshare-app-byarush.adaptable.app/${file._id}`,
+        path: `https://fileshare-app-byarush.adaptable.app/file/${file._id}`,
       });
   } catch (error) {
     console.error(error.message);
