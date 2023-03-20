@@ -9,7 +9,9 @@ export const uploadImage = async (request, response) => {
     const file = await File.create(fileObj);
     response
       .status(200)
-      .json({ path: `http://localhost:8000/file/${file._id}` });
+      .json({
+        path: `https://fileshare-app-byarush.adaptable.app/${file._id}`,
+      });
   } catch (error) {
     console.error(error.message);
     response.status(500).json({ error: error.message });
